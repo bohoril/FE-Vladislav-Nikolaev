@@ -11,7 +11,11 @@ test.afterEach(async ({}, testInfo) => {
     }
 });
 
-test('shouldDownloadFile', async ({page}) => {
+test('shouldDownloadFile', async ({page, browserName}) => {
+    if (browserName === 'webkit') {
+        test.skip(true, 'Skipping test on WebKit due to Playwright open issue');
+    }
+
     const downloaderPage = new SecureFileDownloaderPage(page);
     await downloaderPage.navigate();
 
