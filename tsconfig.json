@@ -10,6 +10,6 @@
     "skipLibCheck": true,
     "outDir": "dist"
   },
-  "include": ["tests", "pages", "utils", "fixtures"],
+  "include": ["tests", "pages", "utils"],
   "exclude": ["dist", "node_modules"]
 }
